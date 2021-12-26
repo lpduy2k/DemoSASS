@@ -1,0 +1,25 @@
+.intro{
+    background: linear-gradient(45deg, $color-purple, $color-red-0);
+    .intro__content{
+        .intro__item{
+            .icon__item{
+                @include styleText($color-white-0,$fs-5,$none);
+            }
+            .icon__content{
+                @include styleText($color-white-0,$fs-1,$none);
+            }
+            @include responsive('extra-large'){
+                .icon__item{
+                    display: none;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include responsive('medium'){
+        .intro__content{
+            display: none;
+        }
+    }
+}
+

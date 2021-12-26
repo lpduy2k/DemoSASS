@@ -1,0 +1,67 @@
+@mixin styleText($color,$fs,$fw){
+    color: $color; 
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButton($bg-color,$border-color,$radius,$py,$px){
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    padding: $py $px;
+}
+
+@mixin styleHoverButton($bg-color,$border-color,$color) {
+    background-color: $bg-color;
+    border-color: $border-color;
+    color: $color;
+}
+
+@mixin styleButtonHeader($bg-color,$border,$radius,$outline) {
+    background-color: $bg-color;
+    border: $border;
+    border-radius: $radius;
+    outline: $outline;
+}
+
+@mixin styleSearch($bg-color,$border-t,$border-r,$border-b,$border-l,$radius-tr,$radius-br,$transition,$box-shadow,$outline) {
+    background-color: $bg-color;
+    border-top: $border-t;
+    border-right: $border-r;
+    border-bottom: $border-b;
+    border-left: $border-l;
+    border-top-right-radius: $radius-tr;
+    border-bottom-right-radius: $radius-br;
+    transition: $transition;
+    box-shadow: $box-shadow;
+    outline: $outline;
+}
+
+@mixin styleHoverSearch($bg-color,$border-t,$border-r,$border-b,$border-l,$color) {
+    background: $bg-color;
+    border-top: $border-t;
+    border-right: $border-r;
+    border-bottom: $border-b;
+    border-left: $border-l;
+    color: $color;
+}
+
+@mixin styleBorder($color,$border){
+    color: $color;
+    border: $border;
+}
+
+// $screen chứa tên màn hình
+@mixin responsive($screen) {
+    @if(map-has-key($map:$breakpoints, $key:$screen)){
+        // lay gia tri man hinh theo ten
+        $value: map-get($map:$breakpoints, $key:$screen);
+        @media screen and (max-width:$value) {
+            @content;
+        }
+    }
+    @else{
+        // ten man hinh sai
+        @warn "error";
+    }
+}

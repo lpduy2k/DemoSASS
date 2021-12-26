@@ -1,0 +1,47 @@
+.footer__content{
+    width: 95%;
+    margin: auto;
+    .row{
+        .col-3{
+            p{
+                a{
+                    @include styleText($color-blue,$fs-1,$fw-normal); 
+                    text-decoration: none;
+                    &:hover{
+                        @include styleText($color-black-0,$fs-1,$fw-normal); 
+                    }
+                }
+                .b1{
+                    @include styleText($color-blue,$fs-1,$fw-bold); 
+                }
+            }
+            .form-inline{
+                position: relative;
+                .custom-select{
+                    position: absolute;
+                    right: 0;
+                    top: 15px;
+                }
+            }
+        }
+    }
+}
+.footer__item{
+    height: 60px;
+    width: 95%;
+    margin: auto;
+    img{
+        width: 110px;
+    }
+    p{
+        @include styleText($color-gray-4,$fs-1,$fw-normal);
+    }
+    a{
+        @include styleText($color-blue,$fs-1,$fw-normal); 
+        text-decoration: none;
+        &:hover{
+            @include styleText($color-black-0,$fs-1,$fw-normal); 
+        }
+    }
+          
+}

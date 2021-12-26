@@ -1,0 +1,36 @@
+.students__content {
+    h3 {
+        @include styleText($color-black-light,$fs-2,$fw-normal);
+    }
+    .students__courses {
+        position: relative;
+        .card-title {
+            @include styleText($color-black-0, $fs-0, $fw-bold);
+        }
+        .card-text {
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+        }
+        .rating {
+            i {
+                @include styleText($color-yellow, $fs-1, $none);
+            }
+
+            span:first-child {
+                @include styleText($color-black-0, $fs-0, $fw-bold);
+            }
+            span:last-child {
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+            }
+        }
+        .price {
+            text-align: right;
+            .old-price {
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+                text-decoration: line-through;
+            }
+            .new-price {
+                @include styleText($color-black-0, $fs-2, $fw-bold);
+            }
+        }
+    }
+}

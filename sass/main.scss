@@ -1,0 +1,51 @@
+// - Base: 
+// + reset.scss 
+// + castomize.scss (de code toan bo thu vien)
+// - Helper:
+// + variable
+// + extend
+// + mixin
+// - Component: 
+// + button
+// + farm
+// - Layout: 
+// + header
+// + footer
+// - Page:
+// + Home (scss)
+// + admin
+// - Vender: (chua code cac thu vien)
+// - Theme: (kieu layout khac nhau)
+
+// main chi chua duong dan toi cac file con
+// Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+
+//Vendor, chỉ import file scss của thư viện
+
+//Base
+@import './Base/reset';
+@import './Base/customize';
+
+//Components
+@import './Components/button';
+
+//Layout
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/intro';
+@import './Layouts/courses';
+@import './Layouts/servicers';
+@import './Layouts/students';
+@import './Layouts/banner';
+@import './Layouts/topCategories';
+@import './Layouts/comments';
+@import './Layouts/companies';
+@import './Layouts/footer';
+
+//Page
+// @import './Page/Home/Admin/';
+
+//Theme
+// @import './Theme/dark/Admin';

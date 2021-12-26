@@ -1,0 +1,47 @@
+.servicers{
+    height: 185px;
+    background-color: $color-white-cream;
+    .servicers__content{
+        p{
+            color: $color-gray-4;
+        }
+    }
+    .sv{
+        height: 140px;
+        width: 315px;
+        position: relative;
+        .sv__content{
+            position: absolute;
+            top: 30px;
+            left: 70px;
+        }
+    }
+    .sv1{
+        background-image: url(../img/sv1.jpg);
+    }
+    .sv2{
+        background-image: url(../img/sv2.jpg);
+    }
+    .sv3{
+        background-image: url(../img/sv3.jpg);
+    }
+}
+
+.servicers{
+    .sv{
+        @include responsive('large'){
+            height: 140px;
+            width: 350px;
+        }
+        @include responsive('medium'){
+            height: 140px;
+            width: 386px;
+            left: 50%;
+        }
+        @include responsive('small'){
+            height: 140px;
+            width: 386px;
+            left: 0;
+        }
+    }
+}
